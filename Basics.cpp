@@ -4,9 +4,9 @@ using namespace std; // use the standard namespace to avoid writing std:: consta
 int main()
 {
 
-    // =========================================================================
+    // ===============================================================================
     // --- 1. REVISION: CALCULATING SURFACE AREA AND VOLUME OF A RECTANGULAR PRISM ---
-    // =========================================================================
+    // ===============================================================================
 
     // this section is commented out, but it demonstrates calculating the area and volume of a 3d shape.
     // declare variables for the three sides (width, height, depth).
@@ -24,9 +24,6 @@ int main()
     cout << "Enter z side of rectangle: ";
     cin >> z;
 
-    // clear the console screen.
-    system("cls");
-
     // calculate the surface area of the rectangular prism: 2 * (xy + yz + zx).
     int area = 2 * (x * y + y * z + z * x);
 
@@ -37,9 +34,11 @@ int main()
     cout << "Area of rectangle: " << area << "cm2" << endl;
     cout << "Volume of rectangle: " << volume << "cm3" << endl;
 
-    // ==============================================
+	cout << endl; // add a blank line for readability before the next section.
+
+    // ===========================================
     // --- 2. IF STATEMENTS: CHECK EVEN OR ODD ---
-    // ==============================================
+    // ===========================================
 
     // declare a variable to store the user's number.
     int number;
@@ -63,9 +62,9 @@ int main()
     // add a blank line for readability before the next section.
     cout << endl;
 
-    // =========================================================
+    // =====================================================
     // --- 3. IF-ELSE STATEMENTS: COMPARE A NUMBER TO 10 ---
-    // =========================================================
+    // =====================================================
 
     // declare another variable for the second number comparison.
     int number2;
@@ -93,9 +92,9 @@ int main()
     // add a blank line for readability before the next section.
     cout << endl;
 
-    // =====================================================
+    // ====================================================
     // --- 4. SWITCH STATEMENTS: SCHOOL GRADE EVALUATOR ---
-    // =====================================================
+    // ====================================================
 
     // declare a variable to store the school mark (grade).
     int mark;
@@ -133,7 +132,55 @@ int main()
         break;
     }
 
+    cout << endl; // add a blank line for readability before the next section.
+
+    // =============================================================
+    // --- 5. HOMEWORK: BASIC CALCULATOR USING SWITCH STATEMENTS ---
+    // =============================================================
+
     // HOMEWORK: ask for two numbers in double type and a mathematical operation in char type (+, -, *, /) and perform the operation on the two numbers.
+
+    // declare two variables of type double to store numbers with decimals.
+    double num1, num2;
+    // declare a char variable to store the mathematical operator.
+    char operation;
+
+    // prompt the user to enter the first number.
+    cout << "Enter first number: ";
+    cin >> num1; // read the first number
+
+    // prompt the user to enter the second number.
+    cout << "Enter second number: ";
+    cin >> num2; // read the second number
+
+    // ask the user to choose a mathematical operation.
+    cout << "Enter operation (+ | - | * | /): ";
+    cin >> operation; // read the operator character
+
+    // use a switch statement to determine which mathematical calculation to perform.
+    switch (operation)
+    {
+        case '+':
+            // if the operation is '+', calculate and print the sum.
+            cout << "Result of addition: " << num1 + num2 << endl;
+            break; // exit the switch block
+        case '-':
+            // if the operation is '-', calculate and print the difference.
+            cout << "Result of subtraction: " << num1 - num2 << endl;
+            break;
+        case '*':
+            // if the operation is '*', calculate and print the product.
+            cout << "Result of multiplication: " << num1 * num2 << endl;
+            break;
+        case '/':
+            // if the operation is '/', calculate and print the quotient.
+            cout << "Result of division: " << num1 / num2 << endl;
+            break;
+        default:
+            // if the user enters anything other than the 4 valid operators, handle the invalid input.
+            cout << "Invalid operation." << endl;
+            break;
+    }
 
     // return 0 to indicate that the program executed successfully.
     return 0;
