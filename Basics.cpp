@@ -157,6 +157,13 @@ int main()
     cout << "Enter operation (+ | - | * | /): ";
     cin >> operation; // read the operator character
 
+	if (num2 == 0 && operation == '/')
+	{
+		// check if the user is trying to divide by zero, which is not allowed.
+		cout << "Error: Division by zero is not allowed." << endl;
+		return 0; // exit the program with an error code
+	}
+
     // use a switch statement to determine which mathematical calculation to perform.
     switch (operation)
     {
